@@ -1,0 +1,193 @@
+<section class="income-section">
+
+    <!-- Income Summary -->
+
+    <div class="income-summary">
+
+        <div class="income-card">
+            <h3>Total Income</h3>
+            <h2 id="totalIncome">$0</h2>
+        </div>
+
+        <div class="income-card">
+            <h3>Received</h3>
+            <h2 id="receivedIncome">$0</h2>
+        </div>
+
+        <div class="income-card">
+            <h3>Pending</h3>
+            <h2 id="pendingIncome">$0</h2>
+        </div>
+
+        <div class="income-card">
+            <h3>This Month</h3>
+            <h2 id="monthlyIncome">$0</h2>
+        </div>
+
+    </div>
+
+
+    <!-- Header -->
+
+    <div class="income-header">
+
+        <h2>Income Management</h2>
+
+        <button class="add-income-btn">
+            + Add Income
+        </button>
+
+        <button class="export-btn" id="exportIncome">
+            📊 Export CSV
+        </button>
+
+        <button class="export-pdf-btn" id="exportIncomePdf">
+            📄 Export PDF
+        </button>
+
+    </div>
+
+
+    <!-- Filters -->
+
+    <div class="income-filters">
+
+        <input
+            type="text"
+            id="searchIncome"
+            placeholder="Search Income...">
+
+        <select id="incomeSourceFilter">
+
+            <option value="all">All Sources</option>
+            <option value="Generator Sale">Generator Sale</option>
+            <option value="Generator Rental">Generator Rental</option>
+            <option value="Maintenance">Maintenance</option>
+            <option value="AMC Contract">AMC Contract</option>
+            <option value="Other">Other</option>
+
+        </select>
+
+        <select id="incomeStatusFilter">
+
+            <option value="all">All Status</option>
+            <option value="Received">Received</option>
+            <option value="Pending">Pending</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Table -->
+
+    <div class="income-table-container">
+
+        <table class="income-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Income Name</th>
+                    <th>Source</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+<!-- Analytics -->
+
+<div class="income-analytics">
+
+    <div class="analytics-card">
+
+        <h3>Monthly Income Trend</h3>
+
+        <canvas id="incomeChart"></canvas>
+
+    </div>
+
+    <div class="analytics-card">
+
+        <h3>Income Sources</h3>
+
+        <canvas id="incomeSourceChart"></canvas>
+
+    </div>
+
+</div>
+
+
+
+<!-- Modal -->
+
+<div class="income-modal" id="incomeModal">
+
+    <div class="income-form-box">
+
+        <h2>Add New Income</h2>
+
+        <input
+            type="text"
+            id="incomeName"
+            placeholder="Income Name">
+
+        <input
+            type="text"
+            id="incomeSource"
+            placeholder="Income Source">
+
+        <input
+            type="date"
+            id="incomeDate">
+
+        <input
+            type="number"
+            id="incomeAmount"
+            placeholder="Amount">
+
+        <select id="incomeStatus">
+
+            <option value="Received">
+                Received
+            </option>
+
+            <option value="Pending">
+                Pending
+            </option>
+
+        </select>
+
+        <div class="form-buttons">
+
+            <button id="saveIncome">
+                Save Income
+            </button>
+
+            <button id="closeIncome">
+                Cancel
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

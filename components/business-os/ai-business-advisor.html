@@ -1,0 +1,139 @@
+<section class="ai-advisor-dashboard">
+
+    <div class="advisor-dashboard-header">
+        <div class="advisor-heading-copy">
+            <span class="advisor-eyebrow">
+                BUSINESS INTELLIGENCE
+            </span>
+
+            <h2>🤖 AI Business Advisor</h2>
+
+            <p>
+                Get insights and guidance to help you make business decisions.
+            </p>
+        </div>
+
+        <button
+            type="button"
+            class="primary-btn"
+            id="askBusinessAdvisorBtn"
+            data-ai-action="ask"
+            aria-controls="advisorChatPanel"
+            aria-expanded="false"
+        >
+            ✨ Ask AI
+            <span aria-hidden="true">→</span>
+        </button>
+    </div>
+
+    <div class="advisor-grid">
+
+        <div class="advisor-card">
+            <div class="advisor-card-top">
+                <span class="advisor-icon">🤖</span>
+                <small class="positive">▲ 6 New Today</small>
+            </div>
+            <h3>AI Business Insights</h3>
+            <h1>24</h1>
+            <p>New Business Insights Generated</p>
+        </div>
+
+        <div class="advisor-card">
+            <div class="advisor-card-top">
+                <span class="advisor-icon">📈</span>
+                <small>3 High Priority</small>
+            </div>
+            <h3>Growth Recommendations</h3>
+            <h1>12</h1>
+            <p>AI Growth Strategies</p>
+        </div>
+
+        <div class="advisor-card">
+            <div class="advisor-card-top">
+                <span class="advisor-icon">⚠️</span>
+                <small class="warning">Requires Attention</small>
+            </div>
+            <h3>Business Alerts</h3>
+            <h1>5</h1>
+            <p>Important Actions Required</p>
+        </div>
+
+        <div class="advisor-card">
+            <div class="advisor-card-top">
+                <span class="advisor-icon">💡</span>
+                <small>Updated 5 Minutes Ago</small>
+            </div>
+            <h3>Smart Suggestions</h3>
+            <h1>38</h1>
+            <p>AI Generated Suggestions</p>
+        </div>
+
+    </div>
+
+    <section
+        class="advisor-chat-panel"
+        id="advisorChatPanel"
+        aria-label="AI Business Advisor chat"
+        hidden
+    >
+        <div class="advisor-chat-header">
+            <div>
+                <span class="advisor-eyebrow">YOUR BUSINESS ADVISOR</span>
+                <h3>Ask a business question</h3>
+                <p>Get guidance for your business from Synvora AI.</p>
+            </div>
+
+            <button
+                type="button"
+                class="secondary-btn"
+                data-ai-action="close"
+                aria-label="Close advisor chat"
+            >
+                ✕
+            </button>
+        </div>
+
+        <div
+            class="advisor-chat-messages"
+            id="advisorChatMessages"
+            aria-live="polite"
+            aria-relevant="additions"
+        >
+            <div class="advisor-chat-message advisor-chat-assistant">
+                Hi! Tell me what you need help with—sales, costs, growth, or another business question.
+            </div>
+        </div>
+
+        <form id="advisorChatForm">
+            <label for="advisorChatInput">
+                Your question
+            </label>
+
+            <div class="advisor-chat-compose">
+                <textarea
+                    id="advisorChatInput"
+                    rows="2"
+                    maxlength="2000"
+                    placeholder="For example: How can I reduce this month's expenses?"
+                    required
+                ></textarea>
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                    id="advisorSendBtn"
+                >
+                    Send
+                </button>
+            </div>
+
+            <p
+                class="advisor-chat-status"
+                id="advisorChatStatus"
+                role="status"
+                aria-live="polite"
+            ></p>
+        </form>
+    </section>
+
+</section>

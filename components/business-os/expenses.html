@@ -1,0 +1,395 @@
+<section class="expense-section">
+
+<!-- Expense Summary Cards -->
+
+<div class="expense-summary">
+
+
+    <div class="expense-card">
+
+        <h3>
+            Total Expense
+        </h3>
+
+        <h2 id="totalExpense">
+    $0
+</h2>
+
+    </div>
+
+
+
+    <div class="expense-card">
+
+        <h3>
+            Paid Expense
+        </h3>
+
+        <h2 id="paidExpense">
+    $0
+</h2>
+
+    </div>
+
+
+
+
+    <div class="expense-card">
+
+        <h3>
+            Pending Expense
+        </h3>
+
+        <h2 id="pendingExpense">
+    $0
+</h2>
+
+    </div>
+
+
+
+
+    <div class="expense-card">
+
+        <h3>
+            This Month
+        </h3>
+
+        <h2 id="monthlyExpense">
+    $0
+</h2>
+
+    </div>
+
+
+</div>
+  
+    <div class="expense-header">
+
+        <h2>
+            Expense Management
+        </h2>
+
+
+        <button class="add-expense-btn">
+            + Add Expense
+        </button>
+
+      <button class="export-btn" id="exportExpense">
+    📊 Export CSV
+</button>
+
+      <button class="export-pdf-btn" id="exportPdf">
+    📄 Export PDF
+</button>
+
+    </div>
+
+  
+
+<!-- Expense Filters -->
+
+<div class="expense-filters">
+
+
+    <input 
+    type="text" 
+    id="searchExpense"
+    placeholder="Search Expense...">
+
+
+    <select id="categoryFilter">
+
+        <option value="all">
+            All Categories
+        </option>
+
+        <option value="Maintenance">
+            Maintenance
+        </option>
+
+        <option value="Business">
+            Business
+        </option>
+
+        <option value="Fuel">
+            Fuel
+        </option>
+
+    </select>
+
+
+
+    <select id="statusFilter">
+
+
+        <option value="all">
+            All Status
+        </option>
+
+
+        <option value="Paid">
+            Paid
+        </option>
+
+
+        <option value="Pending">
+            Pending
+        </option>
+
+
+    </select>
+
+
+</div>
+
+    <div class="expense-table-container">
+
+
+        <table class="expense-table">
+
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Expense Name</th>
+
+                    <th>Category</th>
+
+                    <th>Date</th>
+
+                    <th>Amount</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+
+            </thead>
+
+
+
+            <tbody>
+
+
+
+                <tr>
+
+
+                    <td>#001</td>
+
+
+                    <td>
+                        Generator Parts
+                    </td>
+
+
+                    <td>
+                        Maintenance
+                    </td>
+
+
+                    <td>
+                        01 Aug 2026
+                    </td>
+
+
+                    <td>
+                        $250
+                    </td>
+
+
+                    <td>
+
+                        <span class="paid">
+                            Paid
+                        </span>
+
+                    </td>
+
+
+                    <td>
+
+
+                        <button class="edit-btn">
+                            Edit
+                        </button>
+
+
+                        <button class="delete-btn">
+                            Delete
+                        </button>
+
+
+                    </td>
+
+
+                </tr>
+
+
+
+
+                <tr>
+
+
+                    <td>#002</td>
+
+
+                    <td>
+                        Office Rent
+                    </td>
+
+
+                    <td>
+                        Business
+                    </td>
+
+
+                    <td>
+                        01 Aug 2026
+                    </td>
+
+
+                    <td>
+                        $500
+                    </td>
+
+
+                    <td>
+
+                        <span class="pending">
+                            Pending
+                        </span>
+
+                    </td>
+
+
+                    <td>
+
+
+                        <button class="edit-btn">
+                            Edit
+                        </button>
+
+
+                        <button class="delete-btn">
+                            Delete
+                        </button>
+                      
+
+                    </td>
+
+
+                </tr>
+
+
+
+            </tbody>
+
+
+        </table>
+
+
+
+    </div>
+
+
+
+</section>
+
+  <!-- Expense Analytics -->
+
+<div class="expense-analytics">
+
+
+    <div class="analytics-card">
+
+        <h3>
+            Monthly Expense Trend
+        </h3>
+
+
+        <canvas id="expenseChart"></canvas>
+
+
+    </div>
+
+
+
+    <div class="analytics-card">
+
+        <h3>
+            Category Expense
+        </h3>
+
+
+        <canvas id="categoryChart"></canvas>
+
+
+    </div>
+
+
+</div>
+
+<!-- Add Expense Form -->
+
+<div class="expense-modal" id="expenseModal">
+
+
+    <div class="expense-form-box">
+
+
+        <h2>Add New Expense</h2>
+
+
+        <input type="text" id="expenseName" placeholder="Expense Name">
+
+
+        <input type="text" id="expenseCategory" placeholder="Category">
+
+
+        <input type="date" id="expenseDate">
+
+
+        <input type="number" id="expenseAmount" placeholder="Amount">
+
+
+        <select id="expenseStatus">
+
+            <option value="Paid">
+                Paid
+            </option>
+
+            <option value="Pending">
+                Pending
+            </option>
+
+        </select>
+
+
+
+        <div class="form-buttons">
+
+
+            <button id="saveExpense">
+                Save Expense
+            </button>
+
+
+            <button id="closeExpense">
+                Cancel
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
