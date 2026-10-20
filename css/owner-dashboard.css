@@ -1,0 +1,410 @@
+/* ==========================================
+   SYNVORA AI - OWNER DASHBOARD
+========================================== */
+
+.owner-dashboard {
+    width: 100%;
+    margin-top: 25px;
+}
+
+
+/* ==========================================
+   OWNER HEADER
+========================================== */
+
+.owner-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 28px;
+    margin-bottom: 22px;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    backdrop-filter: blur(14px);
+}
+
+.owner-eyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+.owner-dashboard-header h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+}
+
+.owner-dashboard-header p {
+    margin: 0;
+    opacity: 0.65;
+    font-size: 14px;
+}
+
+.owner-header-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.owner-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    background: #22c55e;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+}
+
+
+/* ==========================================
+   OWNER STATS
+========================================== */
+
+.owner-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.owner-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 22px;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+
+    transition: 0.25s ease;
+}
+
+.owner-stat-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.owner-stat-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.06);
+    font-size: 21px;
+}
+
+.owner-stat-card strong {
+    display: block;
+    font-size: 21px;
+    margin-bottom: 4px;
+}
+
+.owner-stat-card span:last-child {
+    display: block;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+
+/* ==========================================
+   OWNER OVERVIEW
+========================================== */
+
+.owner-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.owner-panel {
+    padding: 24px;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+
+    margin-bottom: 20px;
+}
+
+.owner-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+.owner-panel-header h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+}
+
+.owner-panel-header p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.owner-panel-header > span {
+    font-size: 20px;
+}
+
+
+/* ==========================================
+   PERFORMANCE
+========================================== */
+
+.owner-performance-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.owner-performance-item > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.owner-performance-item span {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.owner-performance-item strong {
+    font-size: 13px;
+}
+
+.owner-progress {
+    width: 100%;
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.owner-progress span {
+    display: block;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: currentColor;
+
+    transition: width 0.5s ease;
+}
+
+
+/* ==========================================
+   BUSINESS HEALTH
+========================================== */
+
+.owner-health {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.owner-health-score {
+    min-width: 125px;
+    min-height: 125px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 7px solid rgba(255, 255, 255, 0.08);
+}
+
+.owner-health-score strong {
+    font-size: 27px;
+}
+
+.owner-health-score span {
+    font-size: 11px;
+    opacity: 0.6;
+    margin-top: 4px;
+}
+
+.owner-health-items {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.owner-health-items div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.owner-health-items span {
+    font-size: 13px;
+    opacity: 0.65;
+}
+
+.owner-health-items strong {
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   QUICK ACTIONS
+========================================== */
+
+.owner-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.owner-action-btn {
+    min-height: 85px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.owner-action-btn:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.owner-action-btn > span {
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+
+/* ==========================================
+   RECENT ACTIVITY
+========================================== */
+
+.owner-activity-list {
+    min-height: 100px;
+}
+
+.owner-empty-state {
+    min-height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    opacity: 0.55;
+}
+
+.owner-empty-state span {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.owner-empty-state p {
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1100px) {
+
+    .owner-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .owner-actions-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .owner-dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .owner-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .owner-health {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .owner-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .owner-actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .owner-panel {
+        padding: 18px;
+    }
+
+}

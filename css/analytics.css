@@ -1,0 +1,57 @@
+/* ==========================
+   ANALYTICS OVERVIEW
+========================== */
+
+.analytics-overview{
+    margin-top:30px;
+}
+
+.analytics-overview h2{
+    color:#fff;
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+.analytics-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.analytics-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(15px);
+    transition:.35s;
+}
+
+.analytics-card:hover{
+    transform:translateY(-8px);
+    border-color:#00AEEF;
+    box-shadow:0 0 30px rgba(0,174,239,.25);
+}
+
+.analytics-icon{
+    width:60px;
+    height:60px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    background:rgba(0,174,239,.15);
+    margin-bottom:18px;
+}
+
+.analytics-card h3{
+    color:#fff;
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.analytics-card p{
+    color:#9ca3af;
+    font-size:15px;
+}
