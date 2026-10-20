@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Synvora AI - Profile</title>
+
+    <!-- Business OS ke shared layout/sidebar styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/sidebar-toggle.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/business-os.css">
+</head>
+
+<body>
+
+    <div class="dashboard ai-workspace">
+
+        <div class="mobile-menu-head">
+            <button
+                class="menu-toggle"
+                type="button"
+                onclick="toggleSidebar()"
+                aria-label="Toggle sidebar"
+            >
+                ☰
+            </button>
+        </div>
+
+        <!-- Shared Sidebar -->
+        <aside class="ai-sidebar">
+            <div id="sidebar-container"></div>
+        </aside>
+
+        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Main Content -->
+        <main class="main-dashboard ai-main">
+
+            <header class="ai-header">
+                <div class="workspace-title">
+                    <h1>👤 My Profile</h1>
+                    <p>Manage your Synvora AI account.</p>
+                </div>
+
+                <div class="workspace-actions">
+                    <a href="dashboard.html">
+                        <button class="secondary" type="button">
+                            🏠 Dashboard
+                        </button>
+                    </a>
+
+                    <button class="primary" type="button">
+                        ⭐ Synvora Pro
+                    </button>
+                </div>
+            </header>
+
+            <section class="profile-card">
+                <div class="profile-left">
+
+                    <div class="profile-avatar">
+                        <img
+                            src="https://ui-avatars.com/api/?name=User&background=00AEEF&color=fff&size=180"
+                            alt="Profile"
+                        >
+                    </div>
+
+                    <div class="profile-info">
+                        <h2>Atiq Ur Rehman</h2>
+                        <p>atiq@example.com</p>
+
+                        <span class="plan-badge">
+                            ⭐ Free Plan
+                        </span>
+                    </div>
+                </div>
+
+                <div class="profile-right">
+                    <button class="generate-btn" type="button">
+                        Edit Profile
+                    </button>
+                </div>
+            </section>
+
+            <section class="profile-stats">
+                <div class="profile-stat">
+                    <h3>128</h3>
+                    <p>AI Images</p>
+                </div>
+
+                <div class="profile-stat">
+                    <h3>54</h3>
+                    <p>AI Articles</p>
+                </div>
+
+                <div class="profile-stat">
+                    <h3>36</h3>
+                    <p>AI Codes</p>
+                </div>
+
+                <div class="profile-stat">
+                    <h3>12</h3>
+                    <p>Projects</p>
+                </div>
+            </section>
+
+            <section class="profile-form">
+                <h2>Update Profile</h2>
+
+                <input type="text" placeholder="Full Name" aria-label="Full Name">
+                <input type="email" placeholder="Email Address" aria-label="Email Address">
+                <input type="password" placeholder="New Password" aria-label="New Password">
+
+                <button class="generate-btn" type="button">
+                    💾 Save Changes
+                </button>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Shared sidebar loader and toggle -->
+    <script src="script.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/sidebar-toggle.js"></script>
+
+</body>
+</html>

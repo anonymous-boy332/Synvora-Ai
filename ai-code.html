@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Synvora AI Code Generator</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/sidebar-toggle.css">
+  
+</head>
+
+<body>
+
+<div class="writer-page">
+
+    <div class="mobile-menu-head">
+
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        ☰
+    </button>
+
+</div>
+
+    <aside class="ai-sidebar">
+
+    <div id="sidebar-container"></div>
+
+</aside>
+
+  <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <main class="writer-main">
+
+        <header class="ai-header">
+
+            <h1>AI Code Generator</h1>
+
+            <button onclick="window.location.href='dashboard.html'">
+                Dashboard
+            </button>
+
+        </header>
+
+        <section class="writer-box">
+
+            <h2>Create Code With AI</h2>
+
+            <p>Describe what code you want Synvora AI to generate.</p>
+
+            <select id="codeLanguage">
+
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="React">React</option>
+                <option value="Python">Python</option>
+                <option value="PHP">PHP</option>
+                <option value="Laravel">Laravel</option>
+
+            </select>
+
+            <textarea
+            id="codePrompt"
+            placeholder="Example: Create a responsive login page with HTML and CSS"></textarea>
+
+            <button
+            class="generate-btn"
+            id="generateCode">
+
+                🚀 Generate Code
+
+            </button>
+
+        </section>
+
+        <section class="writer-result">
+
+            <h2>Generated Code</h2>
+
+            <pre id="codeResult" class="result-box">
+
+Your generated code will appear here...
+
+            </pre>
+
+            <br>
+
+            <button id="copyCode">
+
+                📋 Copy Code
+
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/sidebar-toggle.js"></script>
+  
+</body>
+</html>

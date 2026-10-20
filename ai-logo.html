@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Synvora AI Logo Generator</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/sidebar-toggle.css">
+  
+</head>
+
+<body>
+
+<div class="writer-page">
+
+  <div class="mobile-menu-head">
+
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        ☰
+    </button>
+
+</div>
+  
+    <!-- Sidebar -->
+
+    <aside class="ai-sidebar">
+
+    <div id="sidebar-container"></div>
+
+</aside>
+
+  <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Main Area -->
+
+    <main class="writer-main">
+
+        <header class="ai-header">
+
+            <h1>AI Logo Generator</h1>
+
+            <button onclick="window.location.href='dashboard.html'">
+
+                Dashboard
+
+            </button>
+
+        </header>
+
+      <section class="writer-box">
+
+    <h2>Create Professional AI Logo</h2>
+
+    <p>
+        Describe your business and let Synvora AI generate a logo concept.
+    </p>
+
+    <input
+        type="text"
+        id="logoBusiness"
+        placeholder="Business Name">
+
+    <input
+        type="text"
+        id="logoTagline"
+        placeholder="Tagline (Optional)">
+
+    <select id="logoStyle">
+
+        <option value="Modern">Modern</option>
+        <option value="Minimal">Minimal</option>
+        <option value="Luxury">Luxury</option>
+        <option value="3D">3D</option>
+        <option value="Gradient">Gradient</option>
+        <option value="Vintage">Vintage</option>
+
+    </select>
+
+    <textarea
+        id="logoPrompt"
+        placeholder="Example: Create a luxury gold logo for an AI SaaS company with a futuristic style.">
+    </textarea>
+
+    <button
+        class="generate-btn"
+        id="generateLogo">
+
+        🎨 Generate Logo
+
+    </button>
+
+</section>
+
+      <section class="writer-result">
+
+    <h2>Generated Logo</h2>
+
+    <div
+        class="result-box"
+        id="logoResult">
+
+        Your AI generated logo will appear here...
+
+    </div>
+
+    <br>
+
+    <button id="downloadLogo">
+
+        📥 Download Logo
+
+    </button>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/sidebar-toggle.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pdf.css">
+<link rel="stylesheet" href="css/sidebar-toggle.css">
+  
+<title>AI PDF Studio | Synvora AI</title>
+
+<link rel="stylesheet" href="./style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+  
+<!-- ===================================
+     SIDEBAR
+=================================== -->
+
+<aside class="ai-sidebar">
+
+    <div id="sidebar-container"></div>
+
+</aside>
+
+  <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+
+
+<!-- ===================================
+     MAIN CONTENT
+=================================== -->
+
+<div class="main-content">
+
+<div class="pdf-studio">
+
+<!-- ===================================
+     TOP HEADER
+=================================== -->
+
+<div class="page-header">
+
+<button class="menu-toggle" onclick="toggleSidebar()">
+        ☰
+    </button>
+
+    <div>
+
+<h1>📄 AI PDF Studio</h1>
+
+<p>Create professional AI-powered PDF documents in minutes.</p>
+
+</>
+
+<button class="generate-btn">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+Generate PDF
+
+</button>
+
+</div>
+
+
+
+<!-- ===================================
+     HERO CARD
+=================================== -->
+
+<div class="pdf-hero">
+
+<div class="hero-content">
+
+<h2>
+
+Create Beautiful Professional Documents with AI
+
+</h2>
+
+<p>
+
+Generate reports, resumes, proposals, company profiles, ebooks, invoices, quotations and much more using Synvora AI.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ===================================
+     DOCUMENT TYPE
+=================================== -->
+
+<h2 class="section-title">
+
+Choose Document Type
+
+</h2>
+
+<div class="document-grid">
+
+<div class="doc-card">
+
+<i class="fa-solid fa-file-lines"></i>
+
+<h3>Resume / CV</h3>
+
+<p>Professional ATS friendly resume.</p>
+
+</div>
+
+<div class="doc-card">
+
+<i class="fa-solid fa-briefcase"></i>
+
+<h3>Business Proposal</h3>
+
+<p>Create investor-ready proposals.</p>
+
+</div>
+
+<div class="doc-card">
+
+<i class="fa-solid fa-chart-column"></i>
+
+<h3>Business Report</h3>
+
+<p>Generate detailed reports.</p>
+
+</div>
+
+<div class="doc-card">
+
+<i class="fa-solid fa-book"></i>
+
+<h3>E-Book</h3>
+
+<p>Create professional ebooks.</p>
+
+</div>
+
+<div class="doc-card">
+
+<i class="fa-solid fa-file-invoice"></i>
+
+<h3>Invoice</h3>
+
+<p>Professional invoices instantly.</p>
+
+</div>
+
+<div class="doc-card">
+
+<i class="fa-solid fa-building"></i>
+
+<h3>Company Profile</h3>
+
+<p>Modern business profile.</p>
+
+</div>
+
+<div class="doc-card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h3>Assignment</h3>
+
+<p>Student academic documents.</p>
+
+</div>
+
+<div class="doc-card">
+
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+
+<h3>Custom PDF</h3>
+
+<p>Create any document with AI.</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ===================================
+     DOCUMENT DETAILS
+=================================== -->
+
+<h2 class="section-title">
+
+Document Details
+
+</h2>
+
+<div class="pdf-form">
+
+<div class="input-box">
+
+<label>Document Title</label>
+
+<input type="text"
+placeholder="Enter document title">
+
+</div>
+
+<div class="input-box">
+
+<label>Subtitle</label>
+
+<input type="text"
+placeholder="Optional subtitle">
+
+</div>
+
+<div class="input-box">
+
+<label>Author Name</label>
+
+<input type="text"
+placeholder="Your name">
+
+</div>
+
+<div class="input-box">
+
+<label>Company Name</label>
+
+<input type="text"
+placeholder="Company name">
+
+</div>
+
+<div class="input-box">
+
+<label>Language</label>
+
+<select>
+
+<option>English</option>
+
+<option>Urdu</option>
+
+<option>Arabic</option>
+
+<option>French</option>
+
+<option>German</option>
+
+</select>
+
+</div>
+
+<div class="input-box">
+
+<label>Writing Tone</label>
+
+<select>
+
+<option>Professional</option>
+
+<option>Formal</option>
+
+<option>Business</option>
+
+<option>Friendly</option>
+
+<option>Technical</option>
+
+<option>Academic</option>
+
+</select>
+
+</div>
+
+<div class="input-box full-width">
+
+<label>Main Prompt</label>
+
+<textarea rows="10"
+placeholder="Describe your document in detail. The more information you provide, the better and more professional the AI-generated PDF will be."></textarea>
+
+</div>
+
+</div>
+
+<!-- ===================================
+     PDF TEMPLATES
+=================================== -->
+
+<h2 class="section-title">
+Choose Professional Template
+</h2>
+
+
+<div class="template-grid">
+
+
+<div class="template-card active">
+
+<div class="template-preview gold">
+
+<h3>Luxury Gold</h3>
+
+<p>
+Premium business style
+</p>
+
+</div>
+
+<button>
+Use Template
+</button>
+
+</div>
+
+
+
+<div class="template-card">
+
+<div class="template-preview blue">
+
+<h3>Corporate Blue</h3>
+
+<p>
+Professional company style
+</p>
+
+</div>
+
+<button>
+Use Template
+</button>
+
+</div>
+
+
+
+<div class="template-card">
+
+<div class="template-preview dark">
+
+<h3>Dark Professional</h3>
+
+<p>
+Modern AI style
+</p>
+
+</div>
+
+<button>
+Use Template
+</button>
+
+</div>
+
+
+
+<div class="template-card">
+
+<div class="template-preview white">
+
+<h3>Minimal White</h3>
+
+<p>
+Clean document design
+</p>
+
+</div>
+
+<button>
+Use Template
+</button>
+
+</div>
+
+
+
+<div class="template-card">
+
+<div class="template-preview startup">
+
+<h3>Startup Gradient</h3>
+
+<p>
+Creative business look
+</p>
+
+</div>
+
+<button>
+Use Template
+</button>
+
+</div>
+
+
+
+<div class="template-card">
+
+<div class="template-preview academic">
+
+<h3>Academic</h3>
+
+<p>
+Research & study format
+</p>
+
+</div>
+
+<button>
+Use Template
+</button>
+
+</div>
+
+
+</div>
+
+
+
+
+<!-- ===================================
+     AI SMART OPTIONS
+=================================== -->
+
+
+<h2 class="section-title">
+AI Smart Formatting
+</h2>
+
+
+<div class="smart-options">
+
+
+<label>
+
+<input type="checkbox">
+
+Create Professional Cover Page
+
+</label>
+
+
+<label>
+
+<input type="checkbox">
+
+Generate Table of Contents
+
+</label>
+
+
+<label>
+
+<input type="checkbox">
+
+Add Page Numbers
+
+</label>
+
+
+<label>
+
+<input type="checkbox">
+
+Add Header & Footer
+
+</label>
+
+
+<label>
+
+<input type="checkbox">
+
+Generate AI Summary
+
+</label>
+
+
+<label>
+
+<input type="checkbox">
+
+Add Watermark
+
+</label>
+
+
+</div>
+
+
+
+
+<!-- ===================================
+     EXPORT SECTION
+=================================== -->
+
+
+<div class="generate-box">
+
+
+<h2>
+Ready To Create Your PDF?
+</h2>
+
+
+<p>
+Synvora AI will analyze your information and create a professional formatted document.
+</p>
+
+
+
+<button class="generate-pdf-btn">
+
+✨ Generate Professional PDF
+
+</button>
+
+
+<div class="export-buttons">
+
+<button>
+📄 PDF
+</button>
+
+
+<button>
+📝 DOCX
+</button>
+
+
+<button>
+📑 TXT
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<!-- ===================================
+     RECENT DOCUMENTS
+=================================== -->
+
+
+<h2 class="section-title">
+Recent Documents
+</h2>
+
+
+<div class="recent-documents">
+
+
+<div class="recent-card">
+
+📄
+
+<div>
+
+<h3>
+Business Proposal.pdf
+</h3>
+
+<p>
+Created Today
+</p>
+
+</div>
+
+<button>
+Download
+</button>
+
+</div>
+
+
+
+<div class="recent-card">
+
+📄
+
+<div>
+
+<h3>
+Company Profile.pdf
+</h3>
+
+<p>
+Created Yesterday
+</p>
+
+</div>
+
+<button>
+Download
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/sidebar-toggle.js"></script>
+  
+</body>
+
+</html>

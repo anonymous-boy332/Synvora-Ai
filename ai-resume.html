@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Synvora AI Resume Builder</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="resume.css">
+<link rel="stylesheet" href="css/sidebar-toggle.css">
+  
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="mobile-menu-head">
+
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        ☰
+    </button>
+
+</div>
+
+
+
+<div class="resume-page">
+
+<!-- ===========================
+SIDEBAR
+=========================== -->
+
+<aside class="ai-sidebar">
+
+    <div id="sidebar-container"></div>
+
+</aside>
+
+  <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<!-- ===========================
+MAIN
+=========================== -->
+
+<main class="resume-main">
+
+<header class="resume-header">
+
+<div>
+
+<h1>📄 AI Resume Builder</h1>
+
+<p>Create Professional ATS-Friendly Resume using Synvora AI</p>
+
+</div>
+
+<button class="generate-btn" id="generateResume">
+
+✨ Generate Resume
+
+</button>
+
+</header>
+
+<section class="resume-card">
+
+<h2>Personal Information</h2>
+
+<div class="upload-photo">
+
+<label>Passport Size Photo</label>
+
+<input
+type="file"
+id="resumePhoto"
+accept="image/*">
+
+<div class="photo-preview">
+
+<img
+id="previewPhoto"
+src="https://via.placeholder.com/140x170?text=Photo"
+alt="Preview">
+
+</div>
+
+</div>
+
+<div class="resume-grid">
+
+<div class="input-box">
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Atiq Ur Rehman">
+
+</div>
+
+<div class="input-box">
+
+<label>Job Title</label>
+
+<input
+type="text"
+id="job"
+placeholder="Frontend Developer">
+
+</div>
+
+<div class="input-box">
+
+<label>Email</label>
+
+<input
+type="email"
+id="email"
+placeholder="example@gmail.com">
+
+</div>
+
+<div class="input-box">
+
+<label>Phone Number</label>
+
+<input
+type="text"
+id="phone"
+placeholder="+92 300 1234567">
+
+</div>
+
+<div class="input-box">
+
+<label>Address</label>
+
+<input
+type="text"
+id="address"
+placeholder="Karachi, Pakistan">
+
+</div>
+
+<div class="input-box">
+
+<label>Date of Birth</label>
+
+<input
+type="date"
+id="dob">
+
+</div>
+
+<div class="input-box">
+
+<label>LinkedIn</label>
+
+<input
+type="text"
+id="linkedin"
+placeholder="linkedin.com/in/username">
+
+</div>
+
+<div class="input-box">
+
+<label>Portfolio Website</label>
+
+<input
+type="text"
+id="portfolio"
+placeholder="www.yourwebsite.com">
+
+</div>
+
+<div class="input-box full-width">
+
+<label>Professional Summary</label>
+
+<textarea
+
+id="summary"
+
+rows="6"
+
+placeholder="Write a professional summary...">
+
+</textarea>
+
+</div>
+
+  <!-- =====================================
+     EDUCATION
+===================================== -->
+
+<h2>Education</h2>
+
+<div class="input-box full-width">
+
+<label>Education</label>
+
+<textarea
+id="education"
+rows="5"
+placeholder="Bachelor of Computer Science
+University Name
+2021 - 2025">
+
+</textarea>
+
+</div>
+
+<!-- =====================================
+     EXPERIENCE
+===================================== -->
+
+<h2>Work Experience</h2>
+
+<div class="input-box full-width">
+
+<label>Experience</label>
+
+<textarea
+id="experience"
+rows="6"
+placeholder="Frontend Developer
+ABC Software House
+2024 - Present
+
+Responsibilities...">
+
+</textarea>
+
+</div>
+
+<!-- =====================================
+     SKILLS
+===================================== -->
+
+<h2>Professional Skills</h2>
+
+<div class="input-box full-width">
+
+<label>Skills</label>
+
+<textarea
+id="skills"
+rows="4"
+placeholder="HTML, CSS, JavaScript, Tailwind CSS, Bootstrap, PHP, Laravel">
+
+</textarea>
+
+</div>
+
+<!-- =====================================
+     LANGUAGES
+===================================== -->
+
+<h2>Languages</h2>
+
+<div class="input-box">
+
+<label>Languages</label>
+
+<input
+type="text"
+id="languages"
+placeholder="English, Urdu">
+
+</div>
+
+<!-- =====================================
+     CERTIFICATES
+===================================== -->
+
+<div class="input-box">
+
+<label>Certificates</label>
+
+<input
+type="text"
+id="certificates"
+placeholder="Google UX Design, Meta Frontend">
+
+</div>
+
+<!-- =====================================
+     PROJECTS
+===================================== -->
+
+<div class="input-box full-width">
+
+<label>Projects</label>
+
+<textarea
+id="projects"
+rows="5"
+placeholder="Synvora AI SaaS
+AI Image Studio
+AI PDF Studio
+Marketing AI">
+
+</textarea>
+
+</div>
+
+<!-- =====================================
+     REFERENCES
+===================================== -->
+
+<h2>References</h2>
+
+<div class="input-box full-width">
+
+<label>References</label>
+
+<textarea
+id="references"
+rows="4"
+placeholder="Available upon request">
+
+</textarea>
+
+</div>
+
+<!-- =====================================
+     ADDITIONAL INFORMATION
+===================================== -->
+
+<h2>Additional Information</h2>
+
+<div class="input-box full-width">
+
+<label>Additional Information</label>
+
+<textarea
+id="contact"
+rows="4"
+placeholder="GitHub, Portfolio, WhatsApp, Awards, Achievements">
+
+</textarea>
+
+</div>
+
+   <!-- =====================================
+     ACTION BUTTONS
+===================================== -->
+
+<div class="resume-actions">
+
+<button
+class="generate-btn"
+id="generateResume">
+
+✨ Generate Professional Resume
+
+</button>
+
+<button
+class="secondary-btn"
+id="downloadResume">
+
+📄 Download PDF
+
+</button>
+
+</div>
+
+</section>
+
+<!-- =====================================
+     AI RESUME PREVIEW
+===================================== -->
+
+<section class="resume-preview">
+
+<h2>
+
+<i class="fa-solid fa-file-lines"></i>
+
+AI Resume Preview
+
+</h2>
+
+<div
+class="resume-output"
+id="resumeResult">
+
+<div class="resume-placeholder">
+
+<i class="fa-solid fa-file-circle-plus"></i>
+
+<h3>
+
+Your Professional Resume Will Appear Here
+
+</h3>
+
+<p>
+
+Fill your information and click
+<strong>Generate Resume</strong>.
+
+Synvora AI will generate a professional ATS-friendly resume.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/sidebar-toggle.js"></script>
+  
+</body>
+
+</html> 

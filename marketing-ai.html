@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Synvora AI - Marketing AI</title>
+
+    <!-- Business OS ke shared layout/sidebar styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/sidebar-toggle.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/business-os.css">
+</head>
+
+<body>
+
+    <div class="dashboard ai-workspace">
+
+        <div class="mobile-menu-head">
+            <button
+                class="menu-toggle"
+                type="button"
+                onclick="toggleSidebar()"
+                aria-label="Toggle sidebar"
+            >
+                ☰
+            </button>
+        </div>
+
+        <!-- Shared Sidebar -->
+        <aside class="ai-sidebar">
+            <div id="sidebar-container"></div>
+        </aside>
+
+        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Main Content -->
+        <main class="main-dashboard ai-main">
+
+            <header class="ai-header">
+                <div class="workspace-title">
+                    <h1>📢 AI Marketing Assistant</h1>
+                    <p>Create professional marketing content in seconds.</p>
+                </div>
+
+                <div class="workspace-actions">
+                    <a href="dashboard.html">
+                        <button class="secondary" type="button">
+                            🏠 Dashboard
+                        </button>
+                    </a>
+
+                    <button class="primary" type="button">
+                        ⚡ AI Pro
+                    </button>
+                </div>
+            </header>
+
+            <section class="marketing-box">
+                <h2>Create Marketing Content</h2>
+                <p>Select content type and describe your business.</p>
+
+                <div class="marketing-tools">
+                    <div class="marketing-tool">
+                        <h3>📱 Social Media</h3>
+                        <p>Posts &amp; captions</p>
+                    </div>
+
+                    <div class="marketing-tool">
+                        <h3>🎯 Ads</h3>
+                        <p>Campaign ideas</p>
+                    </div>
+
+                    <div class="marketing-tool">
+                        <h3>📧 Email</h3>
+                        <p>Email marketing</p>
+                    </div>
+
+                    <div class="marketing-tool">
+                        <h3>🚀 Growth</h3>
+                        <p>Business strategies</p>
+                    </div>
+                </div>
+
+                <select id="marketingType" aria-label="Marketing content type">
+                    <option>Facebook Ad</option>
+                    <option>Instagram Caption</option>
+                    <option>Google Ads</option>
+                    <option>Email Marketing</option>
+                    <option>LinkedIn Post</option>
+                    <option>YouTube Description</option>
+                </select>
+
+                <textarea
+                    id="marketingPrompt"
+                    placeholder="Example: Write a Facebook ad for a luxury clothing brand in Pakistan."
+                    aria-label="Describe your marketing content"
+                ></textarea>
+
+                <button
+                    class="generate-btn"
+                    id="generateMarketing"
+                    type="button"
+                >
+                    🚀 Generate Marketing Content
+                </button>
+
+                <div class="writer-result">
+                    <div id="marketingResult" class="result-box">
+                        Your AI marketing content will appear here...
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Shared sidebar loader and toggle -->
+    <script src="script.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/sidebar-toggle.js"></script>
+
+</body>
+</html>

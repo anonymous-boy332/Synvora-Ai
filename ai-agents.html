@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Synvora AI Agents</title>
+
+    <!-- Business OS ke shared layout/sidebar styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/sidebar-toggle.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/business-os.css">
+</head>
+
+<body>
+
+    <div class="dashboard agents-page">
+
+        <!-- Mobile Menu Button -->
+        <div class="mobile-menu-head">
+            <button
+                class="menu-toggle"
+                type="button"
+                onclick="toggleSidebar()"
+                aria-label="Toggle sidebar"
+            >
+                ☰
+            </button>
+        </div>
+
+        <!-- Shared Sidebar -->
+        <aside class="ai-sidebar">
+            <div id="sidebar-container"></div>
+        </aside>
+
+        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Main Area -->
+        <main class="main-dashboard agents-main">
+
+            <header class="ai-header">
+                <h1>AI Agents</h1>
+
+                <a href="dashboard.html" class="btn">
+                    Dashboard
+                </a>
+            </header>
+
+            <section class="agent-intro">
+                <h2>Your Intelligent AI Workforce</h2>
+                <p>Select an AI Agent and automate your tasks.</p>
+            </section>
+
+            <section class="agent-cards">
+
+                <div class="agent-card">
+                    <h3>📢 Marketing Agent</h3>
+                    <p>
+                        Create social media campaigns, ads, captions and growth
+                        strategies for your business.
+                    </p>
+                    <button type="button">Run Agent</button>
+                </div>
+
+                <div class="agent-card">
+                    <h3>💼 Business Agent</h3>
+                    <p>
+                        Analyze ideas, create business plans, reports and smart
+                        decisions.
+                    </p>
+                    <button type="button">Run Agent</button>
+                </div>
+
+                <div class="agent-card">
+                    <h3>🎨 Design Agent</h3>
+                    <p>
+                        Generate creative concepts, branding ideas and design
+                        recommendations.
+                    </p>
+                    <button type="button">Run Agent</button>
+                </div>
+
+            </section>
+
+            <section class="agent-task">
+                <h2>Command Your AI Agent</h2>
+
+                <textarea
+                    placeholder="Describe your business task or idea..."
+                    aria-label="Describe your business task"
+                ></textarea>
+
+                <button class="generate-btn" type="button">
+                    Execute Task
+                </button>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Shared sidebar loader and toggle -->
+    <script src="script.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/sidebar-toggle.js"></script>
+
+</body>
+</html>

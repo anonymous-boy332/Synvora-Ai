@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Synvora AI - Code Assistant</title>
+
+    <!-- Business OS ke shared layout/sidebar styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/sidebar-toggle.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/business-os.css">
+</head>
+
+<body>
+
+    <div class="dashboard ai-workspace">
+
+        <div class="mobile-menu-head">
+            <button
+                class="menu-toggle"
+                type="button"
+                onclick="toggleSidebar()"
+                aria-label="Toggle sidebar"
+            >
+                ☰
+            </button>
+        </div>
+
+        <!-- Shared Sidebar -->
+        <aside class="ai-sidebar">
+            <div id="sidebar-container"></div>
+        </aside>
+
+        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Main Content -->
+        <main class="main-dashboard ai-main">
+
+            <header class="ai-header">
+                <div class="workspace-title">
+                    <h1>💻 AI Code Assistant</h1>
+                    <p>
+                        Generate HTML, CSS, JavaScript, Python, PHP, Laravel, React and more.
+                    </p>
+                </div>
+
+                <div class="workspace-actions">
+                    <a href="dashboard.html">
+                        <button class="secondary" type="button">
+                            🏠 Dashboard
+                        </button>
+                    </a>
+
+                    <button class="primary" type="button">
+                        ⚡ AI Pro
+                    </button>
+                </div>
+            </header>
+
+            <section class="code-box">
+                <h2>Generate AI Code</h2>
+
+                <p>
+                    Describe what code you want Synvora AI to generate.
+                </p>
+
+                <select id="codeLanguage" aria-label="Choose programming language">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Laravel">Laravel</option>
+                    <option value="React">React</option>
+                </select>
+
+                <textarea
+                    id="codePrompt"
+                    placeholder="Example: Create a responsive login page using HTML &amp; CSS..."
+                    aria-label="Describe the code you want"
+                ></textarea>
+
+                <button
+                    class="generate-btn"
+                    id="generateCode"
+                    type="button"
+                >
+                    ⚡ Generate Code
+                </button>
+
+                <div class="writer-result">
+                    <pre id="codeResult" class="result-box">Generated code will appear here...</pre>
+                </div>
+
+                <br>
+
+                <button
+                    id="copyCode"
+                    class="secondary"
+                    type="button"
+                >
+                    📋 Copy Code
+                </button>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Shared sidebar loader and toggle -->
+    <script src="script.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/sidebar-toggle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Synvora AI Image Generator</title>
+
+    <!-- Business OS ke shared layout/sidebar styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/sidebar-toggle.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/business-os.css">
+</head>
+
+<body>
+
+    <div class="dashboard ai-workspace">
+
+        <div class="mobile-menu-head">
+            <button
+                class="menu-toggle"
+                type="button"
+                onclick="toggleSidebar()"
+                aria-label="Toggle sidebar"
+            >
+                ☰
+            </button>
+        </div>
+
+        <!-- Shared Sidebar -->
+        <aside class="ai-sidebar">
+            <div id="sidebar-container"></div>
+        </aside>
+
+        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Main Content -->
+        <main class="main-dashboard ai-main">
+
+            <header class="ai-header">
+                <div class="workspace-title">
+                    <h1>🖼 AI Image Generator</h1>
+                    <p>Create professional AI images with Synvora AI.</p>
+                </div>
+
+                <div class="workspace-actions">
+                    <a href="dashboard.html">
+                        <button class="secondary" type="button">
+                            🏠 Dashboard
+                        </button>
+                    </a>
+
+                    <button class="primary" type="button">
+                        ⚡ AI Pro
+                    </button>
+                </div>
+            </header>
+
+            <section class="image-generator-card">
+                <h2>Create Your AI Image</h2>
+
+                <p>
+                    Describe your idea and let Synvora AI generate it.
+                </p>
+
+                <textarea
+                    placeholder="Example: Luxury modern living room interior with golden lights..."
+                    aria-label="Describe the image you want to generate"
+                ></textarea>
+
+                <div class="image-options">
+                    <select aria-label="Choose an image subject">
+                        <option>Living Room</option>
+                        <option>Bedroom</option>
+                        <option>Kitchen</option>
+                        <option>Office</option>
+                        <option>Restaurant</option>
+                        <option>Clothing Store</option>
+                    </select>
+
+                    <select aria-label="Choose an image style">
+                        <option>Realistic</option>
+                        <option>3D Render</option>
+                        <option>Luxury Style</option>
+                        <option>Modern Design</option>
+                    </select>
+                </div>
+
+                <button class="generate-btn" type="button">
+                    ✨ Generate Image
+                </button>
+
+                <div class="image-result">
+                    <div class="placeholder-image">
+                        Your AI Generated Image Will Appear Here
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Shared sidebar loader and toggle -->
+    <script src="script.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/sidebar-toggle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Synvora Projects</title>
+
+    <!-- Business OS ke shared layout/sidebar styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/sidebar-toggle.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/business-os.css">
+</head>
+
+<body>
+
+    <div class="dashboard projects-page">
+
+        <div class="mobile-menu-head">
+            <button
+                class="menu-toggle"
+                type="button"
+                onclick="toggleSidebar()"
+                aria-label="Toggle sidebar"
+            >
+                ☰
+            </button>
+        </div>
+
+        <!-- Shared Sidebar -->
+        <aside class="ai-sidebar">
+            <div id="sidebar-container"></div>
+        </aside>
+
+        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Main Projects Area -->
+        <main class="main-dashboard projects-main">
+
+            <header class="ai-header">
+                <h1>My Projects</h1>
+
+                <button type="button">
+                    + New Project
+                </button>
+            </header>
+
+            <section class="project-grid">
+
+                <div class="project-card">
+                    <div class="project-icon">🎨</div>
+                    <h3>Luxury Interior Design</h3>
+                    <p>AI Image Project</p>
+                    <span>Updated Today</span>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">✍️</div>
+                    <h3>Marketing Campaign</h3>
+                    <p>AI Writer Project</p>
+                    <span>Updated Yesterday</span>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">⚡</div>
+                    <h3>SaaS Automation</h3>
+                    <p>AI Agent Project</p>
+                    <span>Updated 2 Days Ago</span>
+                </div>
+
+            </section>
+
+            <section class="create-project">
+                <h2>Create New Project</h2>
+
+                <input
+                    type="text"
+                    placeholder="Project Name"
+                    aria-label="Project Name"
+                >
+
+                <button type="button">
+                    Create Project
+                </button>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Shared sidebar loader and toggle -->
+    <script src="script.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/sidebar-toggle.js"></script>
+
+</body>
+</html>

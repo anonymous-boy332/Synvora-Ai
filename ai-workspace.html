@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Synvora AI Workspace</title>
+
+    <!-- Business OS ke shared layout/sidebar styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/sidebar-toggle.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/business-os.css">
+</head>
+
+<body>
+
+    <!-- Business OS jaisa shared layout -->
+    <div class="dashboard ai-workspace">
+
+        <div class="mobile-menu-head">
+            <button
+                class="menu-toggle"
+                type="button"
+                onclick="toggleSidebar()"
+                aria-label="Toggle sidebar"
+            >
+                ☰
+            </button>
+        </div>
+
+        <!-- Shared Sidebar -->
+        <aside class="ai-sidebar">
+            <div id="sidebar-container"></div>
+        </aside>
+
+        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Main Workspace -->
+        <main class="main-dashboard ai-main">
+
+            <header class="ai-header">
+                <div class="workspace-title">
+                    <h1>🤖 Synvora AI Workspace</h1>
+                    <p>
+                        Your intelligent AI assistant for business, creativity and productivity.
+                    </p>
+                </div>
+
+                <div class="workspace-actions">
+                    <a href="dashboard.html">
+                        <button class="secondary" type="button">
+                            🏠 Dashboard
+                        </button>
+                    </a>
+
+                    <button class="primary" type="button">
+                        ⚡ AI Pro
+                    </button>
+                </div>
+            </header>
+
+            <!-- Workspace Stats -->
+            <section class="workspace-stats">
+                <div class="workspace-stat-card">
+                    <h3>12</h3>
+                    <p>AI Tools</p>
+                </div>
+
+                <div class="workspace-stat-card">
+                    <h3>156</h3>
+                    <p>Projects</p>
+                </div>
+
+                <div class="workspace-stat-card">
+                    <h3>2,840</h3>
+                    <p>AI Generations</p>
+                </div>
+
+                <div class="workspace-stat-card">
+                    <h3>99.9%</h3>
+                    <p>Uptime</p>
+                </div>
+            </section>
+
+            <!-- AI Chat Interface -->
+            <section class="chat-section">
+                <h2>Synvora AI Assistant</h2>
+
+                <div class="chat-status">
+                    <div class="ai-online">
+                        <span class="status-dot"></span>
+                        Synvora AI Online
+                    </div>
+
+                    <div class="chat-model">
+                        Model: Synvora AI Pro
+                    </div>
+                </div>
+
+                <div class="chat-window">
+                    <div class="ai-message">
+                        Hello! I am Synvora AI.
+                        How can I help you today?
+                    </div>
+
+                    <div class="user-message">
+                        Create a modern AI project idea.
+                    </div>
+
+                    <div class="ai-message">
+                        Sure! I will help you create it.
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <input
+                        type="text"
+                        placeholder="Type your message..."
+                        aria-label="Type your message"
+                    >
+
+                    <button type="button">Send</button>
+                </div>
+            </section>
+
+            <!-- AI Tools -->
+            <section class="ai-tools">
+                <h2>AI Productivity Suite</h2>
+
+                <div class="ai-tool-cards">
+
+                    <a href="ai-image.html">
+                        <div class="ai-tool-card">
+                            🖼
+                            <h3>AI Image Generator</h3>
+                            <p>Create professional AI images.</p>
+                        </div>
+                    </a>
+
+                    <a href="ai-writer.html">
+                        <div class="ai-tool-card">
+                            ✍
+                            <h3>AI Writer</h3>
+                            <p>Generate blogs, ads and emails.</p>
+                        </div>
+                    </a>
+
+                    <div class="ai-tool-card">
+                        📄
+                        <h3>Business Planner</h3>
+                        <p>Create business plans using AI.</p>
+                    </div>
+
+                    <div class="ai-tool-card">
+                        📢
+                        <h3>Marketing Assistant</h3>
+                        <p>Create marketing strategies.</p>
+                    </div>
+
+                    <div class="ai-tool-card">
+                        💻
+                        <h3>Code Assistant</h3>
+                        <p>Generate HTML, CSS, JS and Python.</p>
+                    </div>
+
+                    <div class="ai-tool-card">
+                        🤖
+                        <h3>AI Agents</h3>
+                        <p>Automate your business tasks.</p>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Shared sidebar loader and toggle -->
+    <script src="script.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/sidebar-toggle.js"></script>
+
+</body>
+</html>
